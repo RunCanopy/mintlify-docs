@@ -8,11 +8,16 @@
   "favicon": "/favicon.svg",
   "colors": {
     "primary": "#7E7CBE",
-    "light": "#07C983",
+    "light": "#7E7CBE",
     "dark": "#2d1859",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#7E7CBE",
+      "to": "#2d1859"
+    },
+    "background":{
+      "light": "#EFEFEF",
+      "dark": "#121212"
+
     }
   },
   "topbarLinks": [
@@ -23,56 +28,30 @@
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://app.runcanopy.com"
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
+  "tabs": [],
   "anchors": [
     {
       "name": "Documentation",
       "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "url": "https://docs.runcanopy.com"
     },
     {
       "name": "Blog",
       "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": "https://runcanopy.com/blog/canopy-it-the-new-code-word-for-backend-architecture"
     }
   ],
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
-    },
-    {
-      "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
-    },
-    {
-      "group": "API Documentation",
-      "pages": ["api-reference/introduction"]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
-      ]
+      "pages": [ "quickstart", "connectors", "canopy", "transformations", "endpoints"]
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "twitter": "https://twitter.com/runcanopy",
+    "github": "https://github.com/RunCanopy",
+    "linkedin": "https://www.linkedin.com/company/runcanopy"
   }
 }
