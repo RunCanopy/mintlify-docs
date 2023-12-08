@@ -1,4 +1,80 @@
 ---
 title: 'Connectors'
-description: 'Learn how to create and manage your Canopies'
+description: 'Learn how to create and manage your Connectors'
 ---
+
+<Info>
+    **Prerequisite** Keep in mind an api you want to make a request to and have documentation ready for that api.
+</Info>
+
+## Introduction
+
+In this tutorial, we will learn how to build a
+connector to access APIs. We will be using the
+[OpenWeatherMap API](https://openweathermap.org/api) as an example.
+
+## Step 1: Create a new connector
+Navigate to the Connector Tab on the left sidebar and click on the **Plus (+)** button to open the connector builder.
+<Frame>
+    <img src="/images/connector/open-sidebar.png" style={{borderRadius: '0.5rem'}}/>
+</Frame>
+
+Fill in name and description for your connector. You can also add a logo for your connector.
+
+## Step 2: Add a new resource
+
+We will add the `Current Weather Data` from OpenWeatherMap API as a resource. Click on the **Plus (+)** button on the right of services.
+
+According to the OpenWeatherAPI the curl call is
+```bash
+    https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+```
+
+<Frame>
+    <img src="/images/connector/open-source-panel.png" style={{borderRadius: '0.5rem'}}/>
+</Frame>
+<Steps>
+    <Step>
+        Add a resource `name`*, description and `identifier`.
+        Note: Name and identifier are required
+    </Step>
+    <Step>
+        ### URL
+
+        Url: A destination URL: `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={apiKey}`
+        We will keep the `{lat}`, `{lon}`, and `{apiKey}` as a variable and will pass them at time of execution from the
+        action.
+    </Step>
+    <Step>
+        ### Headers, Parameters, Body
+
+        Parameters: Will be appended to the URL
+
+        Headers: Will be added to the request headers
+
+        Body: Will be added to the request body (only on POST, PUT, PATCH requests)
+    </Step>
+    <Step>
+        ### Arguments
+
+        Arguments are the variables that will be passed to the resource at the time of execution.
+        They can be at time of configuring (`Set`) or time of execution (`Required`).
+
+        The Required arguments are to be `lat` and `lon` and they need to be sent at canopy call time.
+
+        We will set apiKey as a `Set` argument as it will be same for all the calls.
+
+        You can also Add Arguments as global arguments for the connector as a whole and not just the resource.
+    </Step>
+</Steps>
+
+Repeat the steps to add more resources to the connector.
+
+<Frame>
+    <img src="/images/connector/configured-sidebar.png" style={{borderRadius: '0.5rem'}}/>
+</Frame>
+
+## Configure you connector
+
+From the sources tab, configure the connector to start using in your canopies.
+<img src="/images/connector/configure-a-source.png" style={{borderRadius: '0.5rem'}}/>
