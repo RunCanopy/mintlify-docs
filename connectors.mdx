@@ -35,13 +35,16 @@ According to the OpenWeatherAPI the curl call is
 </Frame>
 <Steps>
     <Step>
-        Add a resource `name`*, description and `identifier`.
-        Note: Name and identifier are required
+        ### Basic Information
+        Add a resource `name`, description and `identifier`.
+
+        Note: Name and identifier are required. Needs to be unique and only letters, numbers and dashes are allowed.
     </Step>
     <Step>
         ### URL
 
         Url: A destination URL: `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={apiKey}`
+
         We will keep the `{lat}`, `{lon}`, and `{apiKey}` as a variable and will pass them at time of execution from the
         action.
     </Step>
