@@ -2,3 +2,152 @@
 title: 'Transformations'
 description: 'Learn how to create and manage transformations for your data'
 ---
+
+## What Is a Transformation
+
+A Transformation is an entity that enables data to be modified. It can be thought of as a mathematical function that takes in input data (e.g. produced by a connector) and outputs results (i.e. output data). Multiple transformations can be applied either globally to a canopy, and/or locally to specific connectors in a canopy. Transformations are processed sequentially, one after another, according to the order defined by you. A transformation consists of one or more actions.
+
+## What Is an Action
+An action (or transformation action) is a subunit of transformations. It represents a single type of transformation operation to be applied to input data. Actions are applied sequentially in the order defined by you. For further information on specific action types, refer to [ActionTypes](#action-types).
+
+## Action Types
+### Concatenate
+A concatenate action combines a specified field's value to the destination field's value using a separator.
+### Copy
+A copy action copies a specified field's value as the destination field's new value.
+### Delete
+A delete action removes a specified field and its value.
+### Merge
+A merge action merges a specified field's value to the destination field's value.
+### Move
+A move action moves a specified field and its value to the destination field and its value.
+### Rename
+A rename action changes a specified field's name to a new name.
+### Set
+A set action adds a new field and value to a designated path.
+
+## Using Transformations
+
+### Creating Transformations
+New transformations can be created to be attached to your canopies and/or connectors. Transformations created this way are automatically shared to your organization.
+
+<Steps>
+    <Step>
+        ### Navigate to the Transformations Page
+        Navigate to the Transformations page by clicking the transformations icon on the sidebar.
+        <Frame>
+            <img src="/images/transformations/transformations-plus.png" style={{borderRadius: '0.5rem'}}
+            alt="transformations icon" />
+        </Frame>
+    </Step>
+
+    <Step>
+        ### Create a New Transformation With the Transformation Builder
+        Click on the plus icon on the upper right corner of the Transformations page. You will now see the transformation builder view.
+        <Frame>
+            <img src="/images/transformations/transformations-builder.png" style={{borderRadius: '0.5rem'}}
+                 alt="transformations icon" />
+        </Frame>
+    </Step>
+
+    <Step>
+        ### Add a Name for the Transformation
+        Add a unique name for the transformation under `General Info`.
+    </Step>
+
+    <Step>
+        ### Add Actions
+        Starting by choosing the action `Type`. Then, configure each action by defining one or more `Search` criteria (By Name, Wildcard, Double Wildcard). Depending on the action type, configure additional criteria listed.
+    </Step>
+
+    <Step>
+        ### Use Preview to Confirm Desired Action Behavior
+        The transformation builder provides an `Input` and `Preview` window. Enter a valid JSON snippet into the Input window and review the Preview window to confirm successful transformation results. Each action produces its own Preview window. You can scroll down the Preview window to confirm each action being applied to the Input JSON snippet.
+    </Step>
+
+    <Step>
+        ### Create Transformation
+        Once all configurations are set, be sure to click on the green `Create Transformation` icon in the upper right corner of the transformation builder window.
+    </Step>
+</Steps>
+
+### Modifying Transformations
+The process to modify a transformation is identical to creating a new transformation. The one difference is selecting an existing transformation. Please note that modifying a transformation that is already attached to canopies or connectors will have immediate effect on the canopies and/or connectors.
+
+### Attaching Transformations
+You can attach transformations you or your organization members created to canopies and connectors through the canopy page. You can also attach identical transformations to different connectors or canopies.
+
+<Steps>
+    <Step>
+        ### Open the canopy you want to attach transformations to
+        Navigate to the Projects Tab on the left sidebar and select your desired canopy.
+    </Step>
+
+    <Step>
+        ### Attach transformations to a connector
+        To attach a transformation to a connector, click on the **Plus (+)** button for your desired connector's transformation management bar.
+        <Frame>
+            <img src="/images/transformations/transformations-attach-to-connector.png" style={{borderRadius: '0.5rem'}}
+                 alt="transformations" />
+        </Frame>
+        Then, the transformation sidebar will expand and display transformations available to your organization. Click on the **plus (+)** button for your desired transformation.
+        <Frame>
+            <img src="/images/transformations/transformations-attach-to-connector-select.png" style={{borderRadius: '0.5rem'}}
+                 alt="transformations" />
+        </Frame>
+        The transformation will be attached to the connector.
+        <Frame>
+            <img src="/images/transformations/transformations-attach-to-connector-complete.png" style={{borderRadius: '0.5rem'}}
+                 alt="transformations" />
+        </Frame>
+    </Step>
+
+    <Step>
+        ### Attach transformations to a canopy
+        To attach a transformation to a canopy (global transformation), click on the **Plus (+)** button for your desired transformation from the transformations sidebar.
+        <Frame>
+            <img src="/images/transformations/transformations-attach-to-canopy-select.png" style={{borderRadius: '0.5rem'}}
+                 alt="transformations" />
+        </Frame>
+        The transformation will be attached to the canopy as a **Global Transformation**.
+        <Frame>
+            <img src="/images/transformations/transformations-attach-to-canopy-complete.png" style={{borderRadius: '0.5rem'}}
+                 alt="transformations" />
+        </Frame>
+
+    </Step>
+
+    <Step>
+        ### Use Endpoint Preview to confirm attached transformations are being applied
+    </Step>
+</Steps>
+
+### Detaching transformations
+You can detach transformations from a canopy or connector. Detaching a transformation does not delete the transformation. This is also done through the Canopy page.
+
+<Steps>
+    <Step>
+        Open the canopy you want to detach transformations from.
+    </Step>
+
+    <Step>
+        Then click on the **detach button (x)** of the transformation you wish to be detached.
+        <Frame>
+            <img src="/images/transformations/transformations-detach-from-canopy.png" style={{borderRadius: '0.5rem'}}
+                 alt="transformations" />
+        </Frame>
+    </Step>
+</Steps>
+
+### Deleting Transformations
+You can delete transformations you or your organization members have created. This will remove the transformation from your organization’s transformation library. This is done through the transformation page.
+
+<Steps>
+    <Step>
+        Open the transformation page
+    </Step>
+
+    <Step>
+        Click on the **option button (three dots)** of the transformation you want to delete and click `delete`.
+    </Step>
+</Steps>
