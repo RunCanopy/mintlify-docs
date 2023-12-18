@@ -46,7 +46,7 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": [ "quickstart", "connectors", "canopy", "transformations", "endpoints"]
+      "pages": [ "quickstart", "connectors", "canopy", "transformations", "endpoints", "glossary"]
     }
   ],
   "footerSocials": {
