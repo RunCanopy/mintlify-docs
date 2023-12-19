@@ -11,20 +11,78 @@ A Transformation is an entity that enables data to be modified. It can be though
 An action (or transformation action) is a subunit of transformations. It represents a single type of transformation operation to be applied to input data. Actions are applied sequentially in the order defined by you. For further information on specific action types, refer to [ActionTypes](#action-types).
 
 ## Action Types
+<Tabs>
+<Tab title="Concatenate">
 ### Concatenate
 A concatenate action combines a specified field's value to the destination field's value using a separator.
+#### Configurable Fields
+    <ul>
+        <li>`search`: the JSON path to search</li>
+        <li>`to`: the destination JSON path</li>
+        <li>`separator` the string separator between concatenated results</li>
+    </ul>
+</Tab>
+
+<Tab title="Copy">
 ### Copy
 A copy action copies a specified field's value as the destination field's new value.
+#### Configurable Fields
+    <ul>
+        <li>`search` the JSON path to search</li>
+        <li>`to` the destination JSON path</li>
+    </ul>
+</Tab>
+
+<Tab title="Delete">
 ### Delete
 A delete action removes a specified field and its value.
+#### Configurable Fields
+    <ul>
+        <li>`search`: the JSON path to search</li>
+    </ul>
+</Tab>
+
+<Tab title="Merge">
 ### Merge
 A merge action merges a specified field's value to the destination field's value.
+#### Configurable Fields
+    <ul>
+        <li>`search`: the JSON path to search</li>
+        <li>`to`: the destination JSON path</li>
+    </ul>
+</Tab>
+
+<Tab title="Move">
 ### Move
 A move action moves a specified field and its value to the destination field and its value.
+#### Configurable Fields
+    <ul>
+        <li>`search`: the JSON path to search</li>
+        <li>`to`: the destination JSON path</li>
+    </ul>
+</Tab>
+
+<Tab title="Rename">
 ### Rename
 A rename action changes a specified field's name to a new name.
+#### Configurable Fields
+    <ul>
+        <li>`search`: the JSON path to search</li>
+        <li>`newName`: for the new name to rename to</li>
+    </ul>
+</Tab>
+
+<Tab title="Set">
 ### Set
 A set action adds a new field and value to a designated path.
+#### Configurable Fields
+    <ul>
+        <li>`path`: the path to set the value to</li>
+        <li>`value`: the JSON value to set</li>
+    </ul>
+</Tab>
+
+</Tabs>
 
 ## Using Transformations
 
@@ -58,6 +116,12 @@ New transformations can be created to be attached to your canopies and/or connec
     <Step>
         ### Add Actions
         Starting by choosing the action `Type`. Then, configure each action by defining one or more `Search` criteria (By Name, Wildcard, Double Wildcard). Depending on the action type, configure additional criteria listed.
+        #### By Name
+        identify a field (to apply action) by literal field name
+        #### Wildcard
+        identify all fields in the current depth level of JSON input
+        #### Double Wildcard
+        identify all fields in the current and all sub depth levels of JSON input
     </Step>
 
     <Step>
