@@ -1,0 +1,33 @@
+---
+title: 'Argumenting Sources'
+description: 'Add arguments to connector sources and resources'
+---
+## Overview
+In order to pass arguments for a connector service
+Parameterize the url with `{argumentName}` wherever you see fit. 
+And add an argument either in global (this will affect all services in a source) or at a specific service
+Name the argument whatever name you pass in (examples to follow).
+​
+### Example Get Request: 
+`url` field should look something like: 
+`https://api.sampleapis.com/coffee/iced?page={page}`
+Then in arguments, 
+have a required argument with the `name` being `page`
+Then when you call a canopy: 
+`https://api.canopy.com/<>/call` 
+body should have `{"page": 1}`
+### Example Post Request: 
+`url` field should look something like: 
+POST `https://api.sampleapis.com/coffee/iced`
+Body should have: 
+`{
+ "name": {name} 
+ "cost": {cost}
+ } 
+`
+Then in arguments, 
+have a required argument with the `name` being `name` and a second one with name being `cost` 
+Then when you call a canopy: 
+`https://api.canopy.com/<>/call` 
+body should have 
+`{"name": "iced americano", "cost": "4.99"}`

@@ -31,22 +31,19 @@
     "url": "https://app.runcanopy.com"
   },
   "tabs": [],
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://docs.runcanopy.com"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://runcanopy.com/blog/canopy-it-the-new-code-word-for-backend-architecture"
-    }
-  ],
+  "anchors": [],
   "navigation": [
     {
       "group": "Get Started",
-      "pages": [ "quickstart", "connectors", "canopy", "transformations", "endpoints", "glossary"]
+      "pages": [ 
+        "quickstart", 
+        "connectors", 
+        "argumenting",
+        "canopy", 
+        "transformations", 
+        "endpoints", 
+        "glossary"
+      ]
     }
   ],
   "footerSocials": {
