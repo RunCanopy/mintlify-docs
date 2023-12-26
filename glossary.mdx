@@ -4,9 +4,14 @@ description: 'Definitions for terms used within Canopy'
 ---
 
 ### Definitions
-
-Connector
-Connector Arguments
-Canopy
-Endpoints
-
+#### Connector
+A connector is a component that integrates APIs to be composable and transformable in a canopy.
+#### Connector Argument
+A connector argument is a variable specifying API request details for a connector.
+#### Canopy
+A canopy is a combined set of connectors that represents a final data output.
+The connectors within a canopy are composed and transformed to produce output data.
+A canopy can be connected to endpoints for clients to access its data.
+#### Endpoint
+An Endpoint (i.e. Canopy Endpoint) is a URL that clients send requests to and attain responses from a specific canopy.
+Multiple endpoints can point to the same canopy, and a single canopy can be reconfigured to point to a different canopy.
